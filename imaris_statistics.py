@@ -175,8 +175,8 @@ def volumesToCSV(prefix_list, out_csv):
     
     
 ####    commands to generate output CSVs
-sero_prefixes = ["ni", "AAV2", "AAV6", "AAV7", "AAV8", "AAVDJ"]
-conc_prefixes = ["ni", "low", "medium", "high", "extra high", "XXH"]
+sero_prefixes = ["ni-sero", "AAV2", "AAV6", "AAV7", "AAV8", "AAVDJ"]
+conc_prefixes = ["ni-conc", "low", "medium", "high", "extra high", "XXH"]
 volumesToCSV(sero_prefixes, "serotype_volumes.csv")
 volumesToCSV(conc_prefixes, "concentration_volumes.csv")
     

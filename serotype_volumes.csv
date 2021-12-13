@@ -1,8 +1,9 @@
 Original Image Name,Actin Volume,GFP Volume,Condition
-ni_11-17_P14_various-size_6dpi_3,4803750,0.0,ni
-ni_11-17_P14_various-size_6dpi_2,7855530,0.0,ni
-ni_11-17_P14_various-size_6dpi_4,3960960,7.658740043640137,ni
-ni_11-17_P14_various-size_6dpi_1,8834460,24.95596206188202,ni
+ni_11-16_P13_various-size_6dpi_Subset,15951200,0,ni-sero
+ni_11-16_P13_various-size_6dpi_Subset4,10884400,0,ni-sero
+ni_11-16_P13_various-size_6dpi_Subset5,6316990,0,ni-sero
+ni_11-16_P13_various-size_6dpi_Subset2,10491100,0,ni-sero
+ni_11-16_P13_various-size_6dpi_Subset3,16245800,0,ni-sero
 AAV2_high_11-16_P13_various-size_6dpi_Subset10,6063910,162.2100067138672,AAV2
 AAV2_high_11-16_P13_various-size_6dpi_Subset1 1,12479800,6293.1152998209,AAV2
 AAV2_high_11-16_P13_various-size_6dpi_Subset5,11130900,0.0,AAV2
