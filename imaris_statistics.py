@@ -103,9 +103,13 @@ def pairActinGFP(actin_sheet, GFP_sheet):
     data_dict = {"Original Image Name" : [], 
                  "Actin Volume" : [], "GFP Volume" : []}
     for key in A_volumes.keys():
+        
         data_dict["Original Image Name"].append(key)
         data_dict["Actin Volume"].append(A_volumes[key])
-        data_dict["GFP Volume"].append(G_volumes[key])
+        if key in G_volumes.keys():
+            data_dict["GFP Volume"].append(G_volumes[key])
+        else: #in case there's no surface at all
+            data_dict["GFP Volume"].append(0)
     
     df = pd.DataFrame.from_dict(data_dict)
     return df
@@ -159,7 +163,7 @@ def volumesToCSV(prefix_list, out_csv):
     """
     file_pairs = generateAGFileNames(prefix_list)
     for i in range(len(file_pairs)):
-        df = pairActinGFP(file_pairs[i][0], file_pairs[i][0])
+        df = pairActinGFP(file_pairs[i][0], file_pairs[i][1])
         condition = [prefix_list[i]] * len(df)
         df["Condition"] = condition
         if i == 0:
@@ -171,10 +175,10 @@ def volumesToCSV(prefix_list, out_csv):
     
     
 ####    commands to generate output CSVs
-sero_prefixes = ["AAV2", "AAV6", "AAV7", "AAV8", "AAVDJ"]
+sero_prefixes = ["ni", "AAV2", "AAV6", "AAV7", "AAV8", "AAVDJ"]
 conc_prefixes = ["ni", "low", "medium", "high", "extra high", "XXH"]
-#volumesToCSV(sero_prefixes, "serotype_volumes.csv")
-#olumesToCSV(conc_prefixes, "concentration_volumes.csv")
+volumesToCSV(sero_prefixes, "serotype_volumes.csv")
+volumesToCSV(conc_prefixes, "concentration_volumes.csv")
     
     
 
